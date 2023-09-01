@@ -43,7 +43,7 @@ const busLines: BusLine[] = [
 			<div class="table-auto pt-12 w-2/3 space-y-4">
 				{busLines.map(b => {
 					return (<div class="text-lg flex items-center">
-						<div transition:name="test" class={`h-10 w-10 font-bold text-lg rounded-full border-4 ${b.borderColor} flex items-center justify-center`}>{b.line}</div>
+						<div class={`h-10 w-10 font-bold text-lg rounded-full border-4 ${b.borderColor} flex items-center justify-center`}>{b.line}</div>
 						<a class="pl-4 hover:underline cursor-pointer hover:text-blue-700" href={`/lines/1`}>{b.from} - {b.to}</a>
 					</div>);
 				})}
