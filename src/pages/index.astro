@@ -35,7 +35,6 @@ const busLines: BusLine[] = [
 	},
 ]
 ---
-
 <Layout title="Bus lines of A Coruña">
 	<main class="min-h-[100vh] min-w-full flex items-center justify-center">
 		<div class="w-1/2 bg-slate-50 z-10 p-12 rounded-3xl shadow-xl flex flex-col items-center justify-center">
@@ -44,7 +43,7 @@ const busLines: BusLine[] = [
 			<div class="table-auto pt-12 w-2/3 space-y-4">
 				{busLines.map(b => {
 					return (<div class="text-lg flex items-center">
-						<div class={`h-10 w-10 font-bold text-lg rounded-full border-4 ${b.borderColor} flex items-center justify-center`}>{b.line}</div>
+						<div transition:name="test" class={`h-10 w-10 font-bold text-lg rounded-full border-4 ${b.borderColor} flex items-center justify-center`}>{b.line}</div>
 						<a class="pl-4 hover:underline cursor-pointer hover:text-blue-700" href={`/lines/1`}>{b.from} - {b.to}</a>
 					</div>);
 				})}
